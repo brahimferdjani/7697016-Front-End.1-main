@@ -45,6 +45,7 @@ boutonTrier.addEventListener("click", function () {
     const piecesFiltrees = pieces.filter(function (piece) {
         return piece.prix <= 35;
     });
+    console.log(piecesFiltrees);
    });
 
 const boutonTrierDecroissant = document.querySelector(".btn-trier-decroissant");
@@ -63,4 +64,5 @@ boutonTrierDecroissant.addEventListener("click", function () {
     const piecesFiltrees = pieces.filter(function (piece) {
         return piece.description;
     });
+    console.log(piecesFiltrees);
    });
