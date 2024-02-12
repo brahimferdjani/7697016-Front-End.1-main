@@ -26,3 +26,13 @@ sectionFiches.appendChild(categorieElement);
 sectionFiches.appendChild(descriptionElement);
 sectionFiches.appendChild(stockElement);
 }
+
+const boutonTrier = document.querySelector(".btn-trier");
+
+boutonTrier.addEventListener("click", function () {
+    const piecesOrdonnees = Array.from(pieces);
+    piecesOrdonnees.sort(function (a, b) {
+        return a.prix - b.prix;
+     });
+     console.log(piecesOrdonnees);
+ });
