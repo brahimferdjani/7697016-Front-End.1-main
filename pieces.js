@@ -5,6 +5,7 @@ const pieces = await reponse.json();
 for (let i=0; i< pieces.length; i++){
 // Création des balises 
 const article = pieces[i];
+const piecesElement = document.createElement("article");
 const imageElement = document.createElement("img");
 imageElement.src = article.image;
 const nomElement = document.createElement("h2");
@@ -19,12 +20,12 @@ const stockElement = document.createElement("p");
 stockElement.innerText = article.disponibilite ? "En stock" : "Rupture de stock";
 //Rattachement de nos balises au DOM
 const sectionFiches = document.querySelector(".fiches");
-sectionFiches.appendChild(imageElement);
-sectionFiches.appendChild(nomElement);
-sectionFiches.appendChild(prixElement);
-sectionFiches.appendChild(categorieElement);
-sectionFiches.appendChild(descriptionElement);
-sectionFiches.appendChild(stockElement);
+piecesElement.appendChild(imageElement);
+piecesElement.appendChild(nomElement);
+piecesElement.appendChild(prixElement);
+piecesElement.appendChild(categorieElement);
+piecesElement.appendChild(descriptionElement);
+piecesElement.appendChild(stockElement);
 }
 
 const boutonTrier = document.querySelector(".btn-trier");
@@ -36,3 +37,11 @@ boutonTrier.addEventListener("click", function () {
      });
      console.log(piecesOrdonnees);
  });
+
+ const boutonFiltrer = document.querySelector(".btn-filtrer");
+
+ boutonFiltrer.addEventListener("click", function () {
+    const piecesFiltrees = pieces.filter(function (piece) {
+        return piece.prix <= 35;
+    });
+   });
