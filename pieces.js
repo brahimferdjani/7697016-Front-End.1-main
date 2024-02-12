@@ -20,6 +20,7 @@ const stockElement = document.createElement("p");
 stockElement.innerText = article.disponibilite ? "En stock" : "Rupture de stock";
 //Rattachement de nos balises au DOM
 const sectionFiches = document.querySelector(".fiches");
+sectionFiches.appendChild(piecesElement);
 piecesElement.appendChild(imageElement);
 piecesElement.appendChild(nomElement);
 piecesElement.appendChild(prixElement);
