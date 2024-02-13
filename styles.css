@@ -37,6 +37,9 @@ main {
 	padding: 8px;
 	min-width: 300px;
 	min-height: 400px;
+	display: grid;
+	grid-template-rows: 80px 50px 50px 50px 50px;
+	gap: 15px;
 }
 
 .filtres h3 {
@@ -46,6 +49,9 @@ main {
 .fiches {
 	flex: 1;
 	margin: 8px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5px;
 }
 .fiches img {
 	max-width: 200px;
@@ -58,6 +64,7 @@ main {
 .fiches article {
 	border: 1px solid black;
 	padding: 4px;
+	padding-bottom: 15px;
 }
 .fiches article img {
 	display: block;
@@ -66,9 +73,15 @@ main {
 	max-width: 200px;
 }
 .fiches article p {
+	padding: 0 15px;
 	margin-top: 4px;
 	margin-bottom: 4px;
 }
 .fiches article h2 {
 	text-align: center;
+}
+
+.extra {
+	display: flex;
+	flex-direction: column;
 }
